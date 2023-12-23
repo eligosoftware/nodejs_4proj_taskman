@@ -1,13 +1,15 @@
 const getAllTasks =  (req,res) =>{
-    res.json('all tasks')
+    res.send('all tasks')
 }
 
 const createTask = (req,res)=> {
-    res.json('create task')
+    console.log('ilgar')
+    res.json(req.body)
 }
 
 const getTask = (req,res)=> {
-    res.json('get task')
+    
+    res.json({id:req.params.id})
 }
 
 const updateTask = (req,res)=> {

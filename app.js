@@ -6,6 +6,10 @@ app.get('/hello', (req,res) => {
     res.send("Hello world")
 });
 
+//middleware
+app.use(express.json())
+
+// routes
 app.use('/api/v1/tasks',tasks)
 const PORT = 3000;
 app.listen(port = PORT, console.log(`Server is listening on port ${port}...`))
